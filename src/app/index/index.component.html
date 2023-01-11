@@ -1,0 +1,25 @@
+
+<table border=".5">
+<tr>
+    <td>ID</td>
+    <td>Name</td>
+    <td>Price</td>
+    <td>Description</td>
+    <td>Quantity</td>
+    <td>Action</td>
+</tr>
+
+<tr *ngFor="let p of products" >
+    <td>{{ p.ID }}</td>
+    <td>{{ p.Name }}</td>
+    <td>{{ p.Price }}</td>
+    <td>{{ p.Description}}</td>
+    <td>{{ p.Quantity }}</td>
+    <td>
+      <button type="button" (click)="DeleteProduct(p.ID)" class="btn">DELETE</button>
+      <button type="button"  class="btn">Edit</button>
+      <button type="button"  class="btn">View</button>
+    </td>
+  
+</tr>
+    </table>
